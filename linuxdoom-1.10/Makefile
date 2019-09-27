@@ -8,8 +8,8 @@ CC=  gcc  # gcc or g++		//-- Changed to g++ to avoid some
  												# //-- constant definition errors,
 												# //-- which apparently makes things worse
 
-CFLAGS=-g -Wall -DNORMALUNIX -DLINUX # -DUSEASM
-LDFLAGS=-L/usr/X11R6/lib
+CFLAGS=-g -Wall -DNORMALUNIX -DLINUX -m32 # -DUSEASM //-- added -m32
+LDFLAGS=-L/usr/X11R6/lib/i386-linux-gnu/ # //-- added i386...
 LIBS=-lXext -lX11 -lnsl -lm
 
 # subdirectory for objects
