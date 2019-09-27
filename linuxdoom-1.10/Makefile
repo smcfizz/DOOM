@@ -4,9 +4,11 @@
 #
 # $Log:$
 #
-CC=  gcc  # gcc or g++
+CC=  gcc  # gcc or g++		//-- Changed to g++ to avoid some
+ 												# //-- constant definition errors,
+												# //-- which apparently makes things worse
 
-CFLAGS=-g -Wall -DNORMALUNIX -DLINUX # -DUSEASM 
+CFLAGS=-g -Wall -DNORMALUNIX -DLINUX # -DUSEASM
 LDFLAGS=-L/usr/X11R6/lib
 LIBS=-lXext -lX11 -lnsl -lm
 
